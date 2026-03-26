@@ -115,12 +115,11 @@ def perform_clustering(df, col1, col2):
 
     # Ignore Warnings
     warnings.filterwarnings("ignore")
-   
 
-    # Gather data
+    #Gather_data
     data = df[[col1, col2]]
 
-    # Fit KMeans
+    #Fit KMeans
     kmeans = KMeans(n_clusters=5, random_state=42)
     labels = kmeans.fit_predict(data)
 
