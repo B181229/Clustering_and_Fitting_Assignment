@@ -138,8 +138,7 @@ def perform_clustering(df, col1, col2):
 
 def plot_clustered_data(labels, data, xkmeans, ykmeans, centre_labels):
     fig, ax = plt.subplots()
-    
-    # scatter = ax.scatter(data.iloc[:, 0], data.iloc[:, 1], c=labels)
+    scatter = ax.scatter(data.iloc[:, 0], data.iloc[:, 1], c=labels)
     ax.scatter(xkmeans, ykmeans, c='red', marker='x', s=100)
     ax.set_xlabel(data.columns[0])
     ax.set_ylabel(data.columns[1])
