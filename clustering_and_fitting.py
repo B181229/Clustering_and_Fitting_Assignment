@@ -39,7 +39,7 @@ def plot_categorical_plot(df):
 def plot_statistical_plot(df):
     fig, ax = plt.subplots()
     sns.heatmap(df[['Age', 'Annual Income (k$)',
-                    'Spending Score (1-100)']].corr(),annot=True, ax=ax)
+                    'Spending Score (1-100)']].corr(), annot=True, ax=ax)
     ax.set_title("Correlation Heatmap")
     plt.savefig('statistical_plot.png')
     plt.close()
