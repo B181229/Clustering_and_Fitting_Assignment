@@ -38,8 +38,8 @@ def plot_categorical_plot(df):
 
 def plot_statistical_plot(df):
     fig, ax = plt.subplots()
-    sns.heatmap(df[['Age', 'Annual Income (k$)', 'Spending Score (1-100)']].corr(),
-                annot=True, ax=ax)
+    sns.heatmap(df[['Age', 'Annual Income (k$)', 
+                    'Spending Score (1-100)']].corr(),annot=True, ax=ax)
     ax.set_title("Correlation Heatmap")
     plt.savefig('statistical_plot.png')
     plt.close()
@@ -116,10 +116,10 @@ def perform_clustering(df, col1, col2):
     # Ignore Warnings
     warnings.filterwarnings("ignore")
 
-    #Gather_data
+    # Gather_data
     data = df[[col1, col2]]
 
-    #Fit KMeans
+    # Fit KMeans
     kmeans = KMeans(n_clusters=5, random_state=42)
     labels = kmeans.fit_predict(data)
 
